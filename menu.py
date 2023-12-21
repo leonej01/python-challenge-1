@@ -169,38 +169,38 @@ while place_order:
         # Tell the customer they didn't select a number
         print("You didn't select a number.")
 
-    # while True:
-    #     # Ask the customer if they would like to order anything else
-    #     keep_ordering = input("Would you like to keep ordering? (Y)es or (N)o ")
+    while True:
+        # Ask the customer if they would like to order anything else
+        keep_ordering = input("Would you like to keep ordering? (Y)es or (N)o ")
 
-    #     # 5. Check the customer's input
-    #             # Keep ordering
-    #             # Exit the keep ordering question loop
-    #             # Complete the order
-    #             # Since the customer decided to stop ordering, thank them for
-    #             # their order
-    #             # Exit the keep ordering question loop
-    #             # Tell the customer to try again
+        # 5. Check the customer's input
+                # Keep ordering
+                # Exit the keep ordering question loop
+                # Complete the order
+                # Since the customer decided to stop ordering, thank them for
+                # their order
+                # Exit the keep ordering question loop
+                # Tell the customer to try again
         
-    #     match keep_ordering.lower():
-    #         # Customer chose yes
-    #         case 'y':
-    #             # Keep ordering
-    #             place_order = True
-    #             # Exit the keep ordering question loop
-    #             break
-    #         # Customer chose no
-    #         case 'n':
-    #             # Complete the order
-    #             place_order = False
-    #             # Since the customer decided to stop ordering, thank them for their order
-    #             print("Thank you for your order.")
-    #             break
-    #             # Exit the keep ordering question loop
-    #         case _:
-    #         # Customer typed an invalid input
-    #         # Tell the customer to try again
-    #             print("I didn't understand your response. Please try again.")
+        match keep_ordering.lower():
+            # Customer chose yes
+            case 'y':
+                # Keep ordering
+                place_order = True
+                # Exit the keep ordering question loop
+                break
+            # Customer chose no
+            case 'n':
+                # Complete the order
+                place_order = False
+                # Since the customer decided to stop ordering, thank them for their order
+                print("Thank you for your order.")
+                break
+                # Exit the keep ordering question loop
+            case _:
+            # Customer typed an invalid input
+            # Tell the customer to try again
+                print("I didn't understand your response. Please try again.")
              
 
 
