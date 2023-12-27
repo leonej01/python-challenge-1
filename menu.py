@@ -133,7 +133,7 @@ while place_order:
                 menu_selection = int(menu_selection)
 
                 # 4. Check if the menu selection is in the menu items
-                if menu_selection in menu_items.key():
+                if menu_selection in menu_items.keys():
 
                     # Store the item name as a variable
                     item_name = menu_items[menu_selection]["Item name"]
@@ -215,15 +215,14 @@ print("--------------------------|--------|----------")
 
 # 6. Loop through the items in the customer's order
 for item in order_list:
-    # 7. Store the dictionary items as variables
-    item_name, price, quantity = order_list[item]["Item name"], order_list[item]["Price"], order_list[item]["Quantity"]
+    item_name, price, quantity = item["Item name"], item["Price"], item["Quantity"]
 
     # 8. Calculate the number of spaces for formatted printing
     name_spaces = " " * (24 - len(item_name))
     price_spaces = " " * (6 - len(f"{price}"))
 
     # 9. Create space strings
-    print(f"{item_name}{name_spaces}| ${price}{price_spaces}| {quantity}")
+    #print(f"{item_name}{name_spaces}| ${price}{price_spaces}| {quantity}")
 
     # 10. Print the item name, price, and quantity
     print(f"{item_name}{name_spaces}| ${price}{price_spaces}| {quantity}")
@@ -232,5 +231,5 @@ for item in order_list:
 #Multiply the price by quantity for each item in the order list, then sum()
 # and print the prices.
 Total_cost = sum(item["Price"] * item["Quantity"] for item in order_list)
-print(f'Your order total is: {Total_cost}')
+print(f'Your order total is: ${Total_cost:.2f}')
 
