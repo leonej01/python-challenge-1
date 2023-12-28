@@ -58,7 +58,7 @@ order_list=[]
 
 
 # Launch the store and present a greeting to the customer
-print("Welcome to the Tasty food truck.")
+print("Welcome to the Tasty food truck.\n")
 
 # Customers may want to order multiple items, so let's create a continuous
 # loop
@@ -94,7 +94,7 @@ while place_order:
             print(f"You selected {menu_category_name}")
 
             # Print out the menu options from the menu_category_name
-            print(f"What {menu_category_name} item would you like to order?")
+            print(f"What {menu_category_name} item would you like to order?\n")
             i = 1
             menu_items = {}
             print("Item # | Item name                | Price")
@@ -194,7 +194,7 @@ while place_order:
                 # Complete the order
                 place_order = False
                 # Since the customer decided to stop ordering, thank them for their order
-                print("Thank you for your order.")
+                print("Thank you for your order.\n")
                 break
                 # Exit the keep ordering question loop
             case _:
@@ -210,8 +210,8 @@ print("This is what we are preparing for you.\n")
 # Uncomment the following line to check the structure of the order
 #print(order)
 
-print("Item name                 | Price  | Quantity")
-print("--------------------------|--------|----------")
+print("Item name               | Price  | Quantity")
+print("------------------------|--------|----------")
 
 # 6. Loop through the items in the customer's order
 for item in order_list:
@@ -225,7 +225,7 @@ for item in order_list:
     #print(f"{item_name}{name_spaces}| ${price}{price_spaces}| {quantity}")
 
     # 10. Print the item name, price, and quantity
-    print(f"{item_name}{name_spaces}| ${price}{price_spaces}| {quantity}")
+    print(f"{item_name}{name_spaces}| ${price}{price_spaces}| {quantity}\n")
 
 # 11. Calculate the cost of the order using list comprehension
 #Multiply the price by quantity for each item in the order list, then sum()
